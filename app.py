@@ -51,9 +51,7 @@ def main():
     drone.send_command("command")
     # Enable the stream
     drone.send_command("streamon")
-
-    # pygame.surfarray.blit_array(screen, drone.get_video())
-    # pygame.display.update()
+    drone.receive_telemetry()
 
     stabilized = True
     takeoff = False
